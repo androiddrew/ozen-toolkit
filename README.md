@@ -7,12 +7,24 @@ Given a folder of files or a single audio file, it will extract the speech, tran
 
 ## INSTALLATION
 
+This Repo:
+
+```bash
+python3 -m venv env
+source env/bin/activate
+pip install pip-tools==6.14.0
+pip-sync linux-py-3.10-requirements.txt linux-py-3.10-dev-requirements.txt
+```
+
+
+Upstream:
 ```sh
 Accept the license terms on https://huggingface.co/pyannote/segmentation 
 Install Anaconda or setup your own environment and install requirements
 git clone https://github.com/devilismyfriend/ozen-toolkit
 run Set Up Ozen.bat
 ```
+
 
 ## USAGE
 
@@ -22,3 +34,12 @@ The first time you'll be prompted to provide an HuggingFace token, once you do a
 
 Alternatively you can use ozen.py in cli.
 
+### Orzen CLI
+
+The first time you run the model you will end up creating a config file
+
+```
+python3 ozen.py <file_path>
+```
+
+You will be prompted for a HuggingFace token, a config.ini will be created for you, and models will be downloaded for transcription and diarization. After this initial setup the file path to your wav files will be used to transcibe and encode a new dataset that matches the LJ Speech format!
