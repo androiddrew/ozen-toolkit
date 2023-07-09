@@ -1,0 +1,6 @@
+black
+ruff
+invoke
+isort
+pip-tools
+pre-commit
