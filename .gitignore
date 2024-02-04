@@ -6,5 +6,5 @@ config.ini
 
 env/
 output/
-
+input/
 .ruff_cache/
