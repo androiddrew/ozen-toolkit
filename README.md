@@ -43,3 +43,8 @@ python3 ozen.py <file_path>
 ```
 
 You will be prompted for a HuggingFace token, a config.ini will be created for you, and models will be downloaded for transcription and diarization. After this initial setup the file path to your wav files will be used to transcibe and encode a new dataset that matches the LJ Speech format!
+
+
+### Resouces
+
+- [One speaker segmentation model to rule the all](https://herve.niderb.fr/fastpages/2022/10/23/One-speaker-segmentation-model-to-rule-them-all)

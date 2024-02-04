@@ -1,0 +1,65 @@
+[project]
+name = "ozen"
+version = "0.1.0"
+authors = [
+    {name = "Drew Bednar", email = "drew@runcible.io"},
+]
+description = "Tool for Splitting Audio"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["readme", "dependencies"]
+
+[tool.setuptools]
+packages = ["ozen"]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
+dependencies = {file = ["requirements.txt"]}
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+split-it = "ozen.cli"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+force_single_line = true
+filter_files = true
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+exclude = "(^/\\.git|^/env/|^/venv/|^/node_modules/)"
+
+[tool.ruff]
+line-length = 120
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]

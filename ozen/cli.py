@@ -7,7 +7,7 @@ from datetime import datetime
 import colorama
 from tqdm import tqdm
 
-from modules.utils import *
+from ozen.utils import *
 
 colorama.init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
 from pyfiglet import figlet_format
